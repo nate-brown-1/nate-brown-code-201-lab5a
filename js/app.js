@@ -89,7 +89,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4];
 
-function sumArray(sumArr) { //eslint-disable-line
+function sumArray(sumArr) {
   let sumArraySubTotal = sum(testArray[0],testArray[1])[0];
   let sumArrayTotal = sum(sumArraySubTotal,testArray[2])[0];
   let sumArrayMessage = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sumArrayTotal} is their sum.`;
@@ -115,12 +115,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
-
+function multiplyArray(multArr) {
+  let multArraySubTotal = multiply(testArray[0],testArray[1])[0];
+  let multArrayTotal = multiply(multArraySubTotal,testArray[2])[0];
+  let multArrayMessage = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multArrayTotal}.`;
+  return[multArrayTotal,multArrayMessage];
 }
 
+multiplyArray(testArray);
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
